@@ -1341,12 +1341,12 @@ function init() {
                     if (panel) panel.style.display = State.showSettings ? 'block' : 'none';
                 };
 
-                const prev = createBtn('‹ Prev', State.currentChapterIndex <= 0, () => {
-                   const idx = State.currentChapterIndex - 1;
+                const prev = createBtn('‹ Prev', State.currentChapterIndex >= State.currentChapters.length - 1, () => {
+                   const idx = State.currentChapterIndex + 1;
                    loadAndReadChapter(State.currentChapters[idx].url, idx);
                 });
-                const next = createBtn('Next ›', State.currentChapterIndex >= State.currentChapters.length - 1, () => {
-                   const idx = State.currentChapterIndex + 1;
+                const next = createBtn('Next ›', State.currentChapterIndex <= 0, () => {
+                   const idx = State.currentChapterIndex - 1;
                    loadAndReadChapter(State.currentChapters[idx].url, idx);
                 });
                 const select = document.createElement('select');
