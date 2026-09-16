@@ -165,7 +165,7 @@
                     });
                 });
             }
-            return chapters.reverse(); // Reverse to get CH 1 first
+            return chapters;
         } catch (err) {
             console.error("[novel-plugin] NovelBuddy Details Error:", err);
             return [];
