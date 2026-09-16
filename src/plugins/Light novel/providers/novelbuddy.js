@@ -72,8 +72,8 @@
         }
     }
 
-    const NOVELBUDDY_BASE_URL = "https://novelbuddy.com";
-    const NOVELBUDDY_API_URL = "https://api.novelbuddy.com";
+    const NOVELBUDDY_BASE_URL = "https://novelbuddy.me";
+    const NOVELBUDDY_API_URL = "https://api.novelbuddy.me";
     const PROXY_BASE = getProxyUrl();
 
     // Helper function to proxy a URL
